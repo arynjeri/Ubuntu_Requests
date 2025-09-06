@@ -57,12 +57,12 @@ def download_images(urls):
             with open(filepath, "wb") as f:
                 f.write(file_bytes)
 
-            print(f"✅ Image saved: {filename} at {filepath}")
+            print(f"Image saved at  {filename} at {filepath}")
 
         except requests.exceptions.RequestException as e:
-            print(f"✗ Connection error: {e}")
+            print(f"Connection error: {e}")
         except Exception as e:
-            print(f"✗ Error: {e}")
+            print(f"Error: {e}")
 
     # Save updated hashes after all downloads
     save_hashes(downloaded_hashes)
